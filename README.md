@@ -4,9 +4,9 @@
 ```
 git clone https://github.com/ntkhang2003/map-test-project
 ```
-- Mở project lên, chuyển vào thư mục `api` trong terminal:
+- Mở project lên, chuyển vào thư mục `server` trong terminal:
 ```
-cd api
+cd server
 ```
 - Cài đặt những thư viện cần thiết: 
 ```
@@ -20,13 +20,14 @@ npm start
 ```
 cd client
 ```
-- Cài đặt những thư viện cần thiết:
-```
-npm install .
-```
 - Cài thư viện @material-ui/core:
 ```
 npm install --legacy-peer-deps @material-ui/core
+npm install --legacy-peer-deps @material-ui/icons
+```
+- Cài đặt những thư viện cần thiết:
+```
+npm install .
 ```
 - Chạy client frontend bằng lệnh:
 ```
