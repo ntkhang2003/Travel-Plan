@@ -1,0 +1,100 @@
+.setNote, .setVehicle, .setTimeDeparture{
+    background-color: #fff;
+    border-radius: 10px;
+    float: left;
+    stroke: 0px;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+
+.pinForm {
+    border-radius: 10px;
+    background-color: #00142A;
+    width: 240px;
+    height: 195Px;
+}
+
+.text {
+    float: left;
+    width:  100px;
+    top: 10px;
+    color: #fff;
+}
+.outsideForm {
+    border-radius: 10px;
+}
+.submitButton {
+    border-radius: 10px;
+    color: white;
+    background-color: cyan;
+    width: 100px;
+    height: 40px;
+    position: relative;
+    top: 30px;
+    padding-bottom: 5px;
+
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+    float: top;
+
+
+}
+
+.error-home{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 0;
+    background-color: #00142A;
+    color: white;
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+    padding-top: 300px;
+    z-index: 77777;
+}
+
+.noti, .login-home {
+    top: 50px;
+    padding-top: 400px;
+    margin: 0 5px;
+    font-size: 22px;
+    z-index: 88888;
+
+    
+}
+
+.login-home{
+    color: cyan;
+    font-weight: bolder;
+}
+
+
+.place {
+    color: #00142A;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-top: 6px;
+}
+
+.date {
+    color: #00142A;
+    padding-left: 6px;
+    padding-right: 30px;
+    padding-top: 3px;
+}
+
+.vehicle {
+    color: #00142A;
+    padding-left: 6px;
+
+}
+
+.card {
+    background-color: cyan;
+    border-radius: 10px;
+    stroke: none;
+
+}
