@@ -7,7 +7,7 @@ const Post = ({post}) => {
     const handleDelete = async () => {
         try {
             await axios.delete(`/api/posts/${post._id}`) 
-            window.location.replace('/community')
+            window.location.reload()
         } catch (err) {}
     }
     // const [place, setPlace] = useState("")
@@ -25,17 +25,23 @@ const Post = ({post}) => {
     // };
     return (
         <div className="post">
-            <img className="postImg" src={post.photo} alt="" />
-            <div className='postUsername'>{post.username}</div>
+            <div className='postUsername'>
+                {post.username}
+                <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
+            </div>
+            <img className="postImg" src={post.photo} alt="No images" />
             <div className="postInfo">
-                <div className="post">
-                </div>
-                <span className="postPlace">{post.place}</span>
-                <hr />
+                <span className="postPlace">
+                    {post.place} 
+                    {username === post.username && (
+                        <div className='singlePostEdit'>
+                            <i className="singlePostIcon far fa-edit"></i>
+                            <i className="singlePostIcon far fa-trash-alt" onClick={handleDelete}></i>
+                        </div>
+                        )}
+                </span>
                 <p className="postDesc">{post.desc}</p>
             </div>  
-            <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
-            {username === post.username && (<button type="submit" onClick= {handleDelete}>Delete</button>)}
         </div>
     )
 }

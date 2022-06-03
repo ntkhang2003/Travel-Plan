@@ -35,11 +35,14 @@ router.delete("/:id", async (req, res) => {
     }
 })
 
-//get a post
+//get a post by username/place
 router.get('/:slug', async (req, res) => {
     try {
-        const post1 = await Post.find({username: req.params.slug})
-        res.status(200).json(post1)
+        const decodedSlug = decodeURIComponent(req.params.slug)
+        const post1 = await Post.find({place: decodedSlug})
+        const post2 = await Post.find({username: decodedSlug})
+        if (post1 != '') return res.status(200).json(post1)
+        else if (post2 != '') return res.status(200).json(post2)
     } catch (err) {
         res.status(500).json(err)
     }

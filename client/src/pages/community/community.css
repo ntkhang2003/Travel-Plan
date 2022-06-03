@@ -1,7 +1,18 @@
-
-.community{
-    flex: 9;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px;
-  }
+.community {
+  background-color: #07192E;
+  color: white;
+  overflow: hidden;
+}
+.posts{
+  flex: 9;
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 100vw; */
+  margin: 20px;
+}
+.fa {
+  margin-left: 20px;
+}
+.searchFrame {
+  padding-top: 5px;
+}

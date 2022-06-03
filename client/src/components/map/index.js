@@ -90,14 +90,14 @@ const Map = ({userId, currentUser}) => {
 	}
     return (
         <div style={{ height: "100%", width:"100%", overflow: "hidden" }}>
+            
             <ReactMapGl
                 {...viewport}
                 ref={mapRef}
-                mapboxApiAccessToken="pk.eyJ1IjoicGh1Y2NuZ3V5biIsImEiOiJjbDJ4a3ZmdmMwd2g0M2ttcHF5OWZvbWkwIn0.uG9CSDWu17LM11W2jHEY6w"
-                mapStyle="mapbox://styles/mapbox/streets-v11"
-                // style={{width: "100vw", height: "100vh"}}
+                mapboxApiAccessToken="pk.eyJ1IjoibnRraGFuZzIwMDMiLCJhIjoiY2wybG9jbmNwMDk3ZTNjbzNwZGR3MHJzdCJ9.zgAaGS2pca3J3zYHtQtiuA"
+                mapStyle="mapbox://styles/ntkhang2003/cl2u4h7h9003q14qlg5xxzdh7"
                 width="100vw"
-                height="100vh"
+                height="92vh"
                 onViewportChange={handleViewportChange}
                 // onMove={(viewport => setViewport(viewport))}
                 transitionDuration="200"
@@ -106,14 +106,14 @@ const Map = ({userId, currentUser}) => {
                 {currentUser && 
                     <Geocoder 
                     mapRef={mapRef}
-                    mapboxApiAccessToken="pk.eyJ1IjoicGh1Y2NuZ3V5biIsImEiOiJjbDJ4a3ZmdmMwd2g0M2ttcHF5OWZvbWkwIn0.uG9CSDWu17LM11W2jHEY6w"
+                    mapboxApiAccessToken="pk.eyJ1IjoibnRraGFuZzIwMDMiLCJhIjoiY2wybG9jbmNwMDk3ZTNjbzNwZGR3MHJzdCJ9.zgAaGS2pca3J3zYHtQtiuA"
                     onViewportChange={handleGeocoderViewportChange}
                 />
                 }
                 
-                {/* <GeolocateControl />
-                <NavigationControl /> */}
-                
+                {/* <GeolocateControl/>
+                <NavigationControl/> */}
+
                 {currentUser ? (<PlanBox pins = {pins} />): (<div className="error-home"><span class="noti">Bạn chưa đăng nhập. Hãy đăng nhập để xem lịch trình</span><Link className='login-home' to="/login">Đăng nhập</Link></div>)} 
                 {currentUser && pins.map(p => (
 				<>
@@ -126,7 +126,7 @@ const Map = ({userId, currentUser}) => {
 					<Room
 						style={{
 							fontSize: 4 * viewport.zoom,
-							color: "#00142A",
+							color: "white",
 							cursor: "pointer",
 						}}
 						onClick={() => handleMarkerClick(p._id,p.lat,p.long)}
@@ -192,7 +192,6 @@ const Map = ({userId, currentUser}) => {
                             </div>
                         </Popup>
                     }
-                    
             </ReactMapGl>   
         </div>
     );

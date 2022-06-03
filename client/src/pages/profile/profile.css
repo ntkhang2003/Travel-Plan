@@ -1,3 +1,28 @@
-.username {
-    color: black;
+.profile {
+	background-color: #07192E;
+  color: white;
+	min-height: 92vh;
+  overflow: hidden;
+}
+.userPosts {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20px;
+}
+.userInfo {
+	display: flex;
+}
+.userPic {
+	padding: 50px;
+}
+.userText {
+	font-weight: bold;
+	padding-top: 70px;
+}
+.userText h1, .userText h3 {
+	text-align: left;
+}
+.userPic img{
+	border-radius: 50%;
+	width: 200px;
 }

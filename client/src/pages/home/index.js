@@ -15,7 +15,6 @@ const Home = ({currentUser, userId}) => {
 					<button className="button register">Register</button>
 				</div>
 			)} */}
-            <h1>Home</h1>
         </div>
     );
 };
