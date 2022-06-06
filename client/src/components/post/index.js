@@ -3,26 +3,18 @@ import React, { useState } from 'react'
 import axios from 'axios'
 const Post = ({post}) => {
     const myStorage = window.localStorage
+    const [postId, setPostId] = useState("")
     const username = myStorage.getItem('user')
     const handleDelete = async () => {
         try {
             await axios.delete(`/api/posts/${post._id}`) 
-            window.location.reload()
+            window.location.reload(true)
         } catch (err) {}
     }
-    // const [place, setPlace] = useState("")
-    // const [desc, setDesc] = useState("")
-    // const [img, setImg] = useState("")
-    // const handleUpdate = async () => {
-    //     try {
-    //       await axios.put(`/api/posts/${post._id}`, {
-    //         username,
-    //         place,
-    //         desc,
-    //         photo: img
-    //       });
-    //     } catch (err) {}
-    // };
+    const handleUpdate = async () => {
+        window.location.replace('/singlePost')
+        setPostId(post._id)
+    };
     return (
         <div className="post">
             <div className='postUsername'>
@@ -35,8 +27,8 @@ const Post = ({post}) => {
                     {post.place} 
                     {username === post.username && (
                         <div className='singlePostEdit'>
-                            <i className="singlePostIcon far fa-edit"></i>
-                            <i className="singlePostIcon far fa-trash-alt" onClick={handleDelete}></i>
+                            <i className="singlePostUpdate far fa-edit" onClick={handleUpdate}></i>
+                            <i className="singlePostDelete far fa-trash-alt" onClick={handleDelete}></i>
                         </div>
                         )}
                 </span>

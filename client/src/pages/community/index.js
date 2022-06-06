@@ -26,7 +26,7 @@ const Community = () => {
                 <div className="search">
                     <form>
                         <input type="text" onChange={e => setPlace(e.target.value)}></input>
-                        <button type="submit" onSubmit={handleSubmit}>Search<i className="fa fa-search"></i></button>
+                        <button type="submit" onSubmit={handleSubmit}>Search<i className="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </div>
             </div>
@@ -42,7 +42,7 @@ const Community = () => {
                 ))} */}
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Community;
+export default Community

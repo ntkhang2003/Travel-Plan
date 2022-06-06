@@ -52,6 +52,13 @@
   display: inline-block;
   margin: 0 10px;
 }
-.singlePostIcon {
+.singlePostUpdate, 
+.singlePostDelete {
   cursor: pointer;
+}
+.singlePostUpdate:hover {
+  color: rgb(10, 105, 157);
+}
+.singlePostDelete:hover {
+  color: red;
 }

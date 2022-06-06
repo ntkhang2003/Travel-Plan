@@ -3,10 +3,10 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 import './register.css'
 const Register = () => {
-    const [username, setUsername] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [error, setError] = useState(false);
+    const [username, setUsername] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [error, setError] = useState(false)
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError(false);
@@ -15,12 +15,12 @@ const Register = () => {
                 username,
                 email,
                 password,
-            });
+            })
             res.data && window.location.replace("/login");
             } catch (err) {
-                setError(true);
+                setError(true)
             }
-        };
+        }
     return (
         <div style={{ backgroundColor: "#00142A", height: "100vh" }}>
             <form className="container" name="validateForm" onSubmit={handleSubmit}>
@@ -44,7 +44,7 @@ const Register = () => {
                             
                         </div>
 
-                        {error & <p className='error'>Tạo tài khoản không thành công</p>}
+                        {error & <p className="error">Tạo tài khoản không thành công</p>}
                         <div className="button">
                             <button type="submit" className="loginbutton">Đăng ký</button>
                             <div className="signup">

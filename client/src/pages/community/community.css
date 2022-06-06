@@ -10,9 +10,38 @@
   /* width: 100vw; */
   margin: 20px;
 }
-.fa {
-  margin-left: 20px;
-}
 .searchFrame {
-  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+.search {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+
+  width: fit-content;
+  text-align: center;
+  padding-left: 3px;
+}
+.search i {
+  margin-left: 20px;
+  font-size: 20px;
+}
+.search input[type=text] {
+  width: 500px;
+  font-size: 17px;
+  border: none;
+  color: white;
+  background-color: #07192E;
+}
+.search button {
+  padding: 6px 10px;
+
+  background-color: white;
+  color: #00142A;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 }

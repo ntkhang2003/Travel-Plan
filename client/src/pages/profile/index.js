@@ -21,21 +21,9 @@ const Profile = ({ userId, currentUser,  setUserId, setCurrentUser}) => {
         fetchPosts()
     }, [posts])
     const myStorage = window.localStorage
-    const [place, setPlace] = useState("")
-    const [desc, setDesc] = useState("")
-    const [img, setImg] = useState("")
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        const newPost = {
-            username: user.username,
-            place,
-            desc,
-            photo: img,
-        }
-        try {
-            const res2 = await axios.post("/api/posts", newPost)
-            setPosts(res2.data)
-        } catch (err) {}
+    
+    const handleEdit = () => {
+        window.location.replace('/singlePost')
     }
     const handleLogout = () => {
 		myStorage.removeItem('user')
@@ -53,23 +41,14 @@ const Profile = ({ userId, currentUser,  setUserId, setCurrentUser}) => {
                 </div>
             </div>
             
-            {currentUser && <button className="button logout" onClick={handleLogout}>Logout</button>}
-
+            <button className="button logout" onClick={handleLogout}>Logout</button>
+            <button className='button edit' onClick={handleEdit}>Create post</button>
             <div className='userPosts'>
                 {posts.map((p) => (
                     <Post key={p._id} post={p}/>
                 ))}
             </div>
             
-                
-      
-            
-            {/* <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="place" onChange={e => setPlace(e.target.value)}></input>
-                <textarea type="text" placeholder="desc" onChange={e => setDesc(e.target.value)}></textarea>
-                <input type="text" placeholder="img" onChange={e => setImg(e.target.value)}></input>
-                <button type="submit">Submit</button>
-            </form> */}
         </div>  
     );
 };

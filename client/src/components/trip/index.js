@@ -14,7 +14,7 @@ const Trip = ({pin}) => {
                 <div className="trip-scroll">
 
                     <div className="trip-plane">
-                        <h2 className="trip-info " >{pin.note}<button className='delete-trip' onClick={handleDelete}>-</button></h2>
+                        <h2 className="trip-info">{pin.note}<i className='delete-trip far fa-trash-alt' onClick={handleDelete}></i></h2>
                         <h2 className="trip-vehicle">{pin.vehicle} <span className ='space'>{pin.timeDeparture}</span></h2>
                         
                     </div>

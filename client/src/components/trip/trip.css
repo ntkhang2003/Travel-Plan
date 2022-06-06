@@ -45,10 +45,7 @@
     text-align: left;
 }
 .delete-trip:hover{
-    background-color: red;
-    opacity: 100%;
-    color: white;
-
+    color: red;
 }
 
 .space {
