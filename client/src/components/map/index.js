@@ -97,7 +97,7 @@ const Map = ({userId, currentUser}) => {
                 mapboxApiAccessToken="pk.eyJ1IjoibnRraGFuZzIwMDMiLCJhIjoiY2wybG9jbmNwMDk3ZTNjbzNwZGR3MHJzdCJ9.zgAaGS2pca3J3zYHtQtiuA"
                 mapStyle="mapbox://styles/ntkhang2003/cl2u4h7h9003q14qlg5xxzdh7"
                 width="100vw"
-                height="92vh"
+                height="92.3vh"
                 onViewportChange={handleViewportChange}
                 // onMove={(viewport => setViewport(viewport))}
                 transitionDuration="200"

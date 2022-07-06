@@ -21,11 +21,31 @@ const SinglePost = ({currentUser}) => {
     }
     return (
         <div className='singlePost' onSubmit={handleSubmit}>
-            <form>
-                <input type="text" placeholder="Nhập địa điểm" onChange={e => setPlace(e.target.value)}></input>
-                <textarea type="text" placeholder="Nhập mô tả" onChange={e => setDesc(e.target.value)}></textarea>
-                <input type="text" placeholder="Dán link hình" onChange={e => setPhoto(e.target.value)}></input>
-                <button type="submit">Thêm bài viết</button>
+            <form className='createPost'>
+                <div className='createPostGroup'>
+                    <input 
+                        className='writeInput placePost' 
+                        type="text" 
+                        placeholder="Thêm địa điểm" 
+                        onChange={e => setPlace(e.target.value)}
+                        autoFocus={true}
+                    ></input>
+                    <textarea 
+                        className='writeInput descPost' 
+                        type="text" 
+                        placeholder="Nhập mô tả" 
+                        onChange={e => setDesc(e.target.value)}
+                        autoFocus={true}
+                    ></textarea>
+                    <input 
+                        className='writeInput imgPost' 
+                        type="text" 
+                        placeholder="Dán link hình" 
+                        onChange={e => setPhoto(e.target.value)}
+                        autoFocus={true}
+                    ></input>
+                    <button className='buttonPost' type="submit">Thêm bài viết</button>
+                </div>        
             </form>
         </div>
     )

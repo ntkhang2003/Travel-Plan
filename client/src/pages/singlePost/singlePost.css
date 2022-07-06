@@ -1,0 +1,51 @@
+.singlePost {
+    background-color: #07192E;
+    overflow: hidden;
+    height: calc(100vh - 60px);
+    padding-top: 50px;
+}
+.createPost {
+    position: relative;
+}
+.createPostGroup {
+    margin-left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+.writeInput {
+    background-color: #07192E;
+    border: none;
+    color: white;
+    width: 500px;
+}
+.writeInput:focus {
+    outline-style: none;
+}
+.placePost {
+    height: 50px;
+}
+.placePost::placeholder {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Segoe UI';
+}
+.descPost {
+    height: 350px;
+}
+.imgPost {
+    height: 50px;
+    font-weight: bold;
+}
+.buttonPost {
+    position: absolute;
+    top: 20px;
+    right: 300px;
+    background-color: cyan;
+    border: none;
+    color: #00142A;
+    border-radius: 10px;
+    font-weight: bolder;
+    height: 40px;
+    width: 150px;
+}

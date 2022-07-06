@@ -3,12 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 
 import Home from '../pages/home'
 import Community from '../pages/community'
-import Details from '../pages/details'
-import Help from '../pages/help'
 import Login from '../pages/login'
 import Register from '../pages/register'
-import Service from '../pages/service'
-import About from '../pages/about'
 import Profile from '../pages/profile'
 import SinglePost from '../pages/singlePost'
 
@@ -30,8 +26,8 @@ const Router = () => {
                     currentUser={currentUser}
                 />} 
             />
-            <Route path='/details' element={<Details />} />
-            <Route path='/help' element={<Help />} />
+            {/* <Route path='/details' element={<Details />} />
+            <Route path='/help' element={<Help />} /> */}
             <Route path='/login' element={
                 <Login 
                     setUserId={setUserId}
@@ -40,8 +36,8 @@ const Router = () => {
                 />} 
             />
             <Route path='/register' element={<Register />} />
-            <Route path='/service' element={<Service />} />
-            <Route path='/about' element={<About />} />
+            {/* <Route path='/service' element={<Service />} />
+            <Route path='/about' element={<About />} /> */}
             <Route path='/profile' element={currentUser ? 
                 (<Profile
                     userId={userId}

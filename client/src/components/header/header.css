@@ -46,3 +46,18 @@
     color: #FFF;
     text-decoration: none;
 }
+.header__logout {
+    cursor: pointer;
+    color: white;
+}
+.header__login img {
+    cursor: pointer;
+    position: relative;
+}
+.header__nav-list-item-click {
+    display: none;
+    position: absolute;
+}
+.header__login:hover .header__nav-list-item-click {
+    display: inline-block;
+}
