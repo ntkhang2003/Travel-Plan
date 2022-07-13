@@ -14,6 +14,7 @@ const Header = () => {
     const handleLogout = () => {
 		myStorage.removeItem('user')
 		myStorage.removeItem('userId')
+        myStorage.removeItem('postId')
         setCurrentUser(null)
         setUserId(null)
         window.location.replace('/login')
@@ -48,7 +49,7 @@ const Header = () => {
                                         <Link to="/community">Community</Link>
                                     </li>
                                     <li className='header__nav-list-item'>
-                                        <Link to="/singlePost">Write</Link>
+                                        <Link to="/write">Write</Link>
                                     </li>
                                 </ul>
                             </nav>

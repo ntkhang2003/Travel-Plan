@@ -1,11 +1,21 @@
-import './singlePost.css'
-import React, { useState } from 'react'
+import './write.css'
+import React, { useState, useEffect } from 'react'
 // import Post from '../../components/post/index'
 import axios from "axios"
-const SinglePost = ({currentUser}) => {
+const Write = ({currentUser}) => {
+    const myStorage = window.localStorage
     const [place, setPlace] = useState("")
     const [desc, setDesc] = useState("")
     const [photo, setPhoto] = useState("")
+    const postId = myStorage.getItem('postId')
+    const [post, setPost] = useState()
+    useEffect(() => {
+        const fetchPost = async () => {
+            const res = await axios.get(`api/posts/${postId}/edit`)
+            setPost(res.data)
+        }
+        fetchPost()
+    }, [])
     const handleSubmit = async (e) => {
         e.preventDefault()
         const newPost = {
@@ -15,8 +25,10 @@ const SinglePost = ({currentUser}) => {
             photo: photo,
         }
         try {
-            await axios.post("/api/posts", newPost)
+            if (postId != '') await axios.put(`/api/posts/${postId}`, newPost)
+            else await axios.post('/api/posts', newPost)
             window.location.replace('/profile')
+            myStorage.removeItem('postId')
         } catch (err) {}
     }
     return (
@@ -51,4 +63,4 @@ const SinglePost = ({currentUser}) => {
     )
 }
 
-export default SinglePost
+export default Write

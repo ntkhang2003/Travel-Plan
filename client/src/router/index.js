@@ -6,7 +6,7 @@ import Community from '../pages/community'
 import Login from '../pages/login'
 import Register from '../pages/register'
 import Profile from '../pages/profile'
-import SinglePost from '../pages/singlePost'
+import Write from '../pages/write'
 
 const Router = () => {
     const myStorage = window.localStorage
@@ -21,8 +21,8 @@ const Router = () => {
                 />}
             />
             <Route path='/community' element={<Community />} />
-            <Route path='/singlePost' element={
-                <SinglePost 
+            <Route path='/write' element={
+                <Write 
                     currentUser={currentUser}
                 />} 
             />
@@ -55,4 +55,4 @@ const Router = () => {
     );
 };
 
-export default Router;
+export default Router

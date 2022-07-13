@@ -1,23 +1,22 @@
-import "./community.css"
-import React , {useState, useEffect} from 'react';
+import './community.css'
+import React , {useState, useEffect} from 'react'
 import Post from '../../components/post/index'
-import axios from "axios"
+import axios from 'axios'
 const Community = () => {
     const [posts, setPosts] = useState([])
     useEffect(() => {
         const fetchPosts = async () => {
-            const res = await axios.get("/api/posts")
+            const res = await axios.get(`api/posts`)
             setPosts(res.data)
-        }
-        fetchPosts()
-    }, [])
-    const [place, setPlace] = useState("")
-    const [search, setSearch] = useState()
+        }    
+        fetchPosts()    
+    }, [posts])
+    const [place,setPlace] = useState('')
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res1 = await axios.get(`/api/posts/${place}`)
-            setSearch(res1.data)
+            const res1 = await axios.get(`api/posts/${place}`)
+            setPosts(res1.data)
         } catch (err) {}
     }
     return (
@@ -38,12 +37,12 @@ const Community = () => {
             </div>
 
             <div className="posts">
-                {search ? (search) : (posts).map((p) => (
-                    <Post key={p._id} post={p}/>
-                ))}
-                {/* {posts.map((p) => (
+                {/* {search ? (search) : (posts).map((p) => (
                     <Post key={p._id} post={p}/>
                 ))} */}
+                {posts.map((p) => (
+                    <Post key={p._id} post={p}/>
+                ))}
             </div>
         </div>
     )
