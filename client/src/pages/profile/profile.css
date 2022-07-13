@@ -1,13 +1,14 @@
 .profile {
 	background-color: #07192E;
-  color: white;
-	min-height: 92vh;
-  overflow: hidden;
+  	color: white;
+  	overflow: hidden;
 }
 .userPosts {
 	display: flex;
-	flex-wrap: wrap;
-	margin: 20px;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding: 5%;
+	margin: 0;
 }
 .userInfo {
 	display: flex;
