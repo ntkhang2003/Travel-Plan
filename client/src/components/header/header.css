@@ -6,9 +6,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 10%;
     background-color: #00142B;
     z-index: 100;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -46,18 +47,34 @@
     color: #FFF;
     text-decoration: none;
 }
-.header__logout {
-    cursor: pointer;
-    color: white;
-}
 .header__login img {
     cursor: pointer;
     position: relative;
 }
+
+.header__login:hover .header__nav-list-item-click {
+    display: flex;
+}
+
+.header__login img {
+    padding: 10px 40px;
+}
+
 .header__nav-list-item-click {
     display: none;
-    position: absolute;
 }
-.header__login:hover .header__nav-list-item-click {
-    display: inline-block;
+
+.header__nav-list-item-click ul {
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #00142B;
+    min-width: 120px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.header__nav-list-item-click:hover {
+    color: aqua;
 }

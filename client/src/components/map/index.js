@@ -103,13 +103,13 @@ const Map = ({userId, currentUser}) => {
                 transitionDuration="200"
                 onDblClick={handleDblClick}
             >
-                {currentUser && 
+                {/* {currentUser && 
                     <Geocoder 
                     mapRef={mapRef}
                     mapboxApiAccessToken="pk.eyJ1IjoibnRraGFuZzIwMDMiLCJhIjoiY2wybG9jbmNwMDk3ZTNjbzNwZGR3MHJzdCJ9.zgAaGS2pca3J3zYHtQtiuA"
                     onViewportChange={handleGeocoderViewportChange}
                 />
-                }
+                } */}
                 
                 {/* <GeolocateControl/>
                 <NavigationControl/> */}

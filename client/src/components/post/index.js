@@ -22,7 +22,7 @@ const Post = ({post}) => {
             </div>
             <img className="postImg" src={post.photo} alt="No images" />
             <div className="postInfo">
-                <span className="postPlace">
+                <p className="postPlace">
                     {post.place} 
                     {username === post.username && (
                         <div className='singlePostEdit'>
@@ -30,7 +30,7 @@ const Post = ({post}) => {
                             <i className="singlePostDelete far fa-trash-alt" onClick={handleDelete}></i>
                         </div>
                         )}
-                </span>
+                </p>
                 <p className="postDesc">{post.desc}</p>
             </div>  
         </div>

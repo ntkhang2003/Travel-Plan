@@ -8,7 +8,7 @@ const Community = () => {
         const fetchPosts = async () => {
             const res = await axios.get(`api/posts`)
             setPosts(res.data)
-        }
+        }    
         fetchPosts()    
     }, [posts])
     const [place,setPlace] = useState('')
@@ -21,18 +21,22 @@ const Community = () => {
     }
     return (
         <div className='community'>
+            <div className="Title">
+                <h2>Community</h2>
+            </div>
             <div className="searchFrame">
                 <div className="search">
                     <form>
                         <input type="text" onChange={e => setPlace(e.target.value)}></input>
-                        <button type="submit" onSubmit={handleSubmit}>Search<i className="fa-solid fa-magnifying-glass"></i></button>
+                        <button type="submit" onSubmit={handleSubmit}>
+                            Search
+                            <i className="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </form>
                 </div>
             </div>
-            
 
             <div className="posts">
-                
                 {/* {search ? (search) : (posts).map((p) => (
                     <Post key={p._id} post={p}/>
                 ))} */}
