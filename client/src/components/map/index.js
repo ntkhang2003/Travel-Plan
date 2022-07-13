@@ -186,7 +186,7 @@ const Map = ({userId, currentUser}) => {
                                     />
                                     <br/>
                                     <div>
-                                        <button className="submitButton" type="submit">Add</button>
+                                        <button className="submitButton-Map" type="submit">Add</button>
                                     </div>
                                 </form>
                             </div>

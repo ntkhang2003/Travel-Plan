@@ -34,6 +34,9 @@
   color: white;
   background-color: #07192E;
 }
+.search input[type=text]:focus {
+  outline-style: none;
+}
 .search button {
   padding: 6px 10px;
   background-color: white;

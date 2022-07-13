@@ -3,18 +3,17 @@ import React, { useState } from 'react'
 import axios from 'axios'
 const Post = ({post}) => {
     const myStorage = window.localStorage
-    const [postId, setPostId] = useState("")
     const username = myStorage.getItem('user')
     const handleDelete = async () => {
         try {
             await axios.delete(`/api/posts/${post._id}`) 
-            window.location.reload(true)
+            window.location.replace('/profile')
         } catch (err) {}
     }
     const handleUpdate = async () => {
-        window.location.replace('/singlePost')
-        setPostId(post._id)
-    };
+        myStorage.setItem('postId', post._id)
+        window.location.replace('/write')
+    }
     return (
         <div className="post">
             <div className='postUsername'>

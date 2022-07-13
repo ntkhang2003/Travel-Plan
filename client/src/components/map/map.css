@@ -12,7 +12,7 @@
     border-radius: 10px;
     background-color: #00142A;
     width: 240px;
-    height: 195Px;
+    height: 195px;
 }
 
 .text {
@@ -24,7 +24,7 @@
 .outsideForm {
     border-radius: 10px;
 }
-.submitButton {
+.submitButton-Map {
     border-radius: 10px;
     color: white;
     background-color: cyan;
@@ -33,7 +33,7 @@
     position: relative;
     top: 30px;
     padding-bottom: 5px;
-
+    align-items: center;
     font-size: 15px;
     font-weight: bolder;
     text-align: center;
